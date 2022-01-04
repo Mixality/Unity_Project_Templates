@@ -11,12 +11,18 @@
 ## Basic Setup
 
 * Based on the AR Template of Unity 2020.3 LTS (Downloadable)
-* Enabled ARCore on Android, removed Vulkan in graphics settings, switched to API level 24 and ILLCPP (for 64bit)
+* Enabled ARCore on Android, removed Vulkan in graphics settings, switched to API level 24 and IL2CPP (for 64bit)
 * Configured ARCore for Android in the XR Plug-in Management Settings
 * Added ARCore Extensions from https://github.com/google-ar/arcore-unity-extensions.git based on the description on this page: https://developers.google.com/ar/develop/unity-arf/getting-started-extensions
 * Configured Universal Rendering Pipeline
 * Enabled background rendering of camera picture
 * Enabled Development Build and Scrupt Debugging
+
+# How to Start and Use
+
+* Open the project in Unity
+* Switch Build Settings to Android + Development Build + Script Debugging
+* Open Scenes/BasicARScene
 
 # FAQ
 
