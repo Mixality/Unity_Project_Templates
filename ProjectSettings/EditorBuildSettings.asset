@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/BasicARScene.unity
     guid: 6bdce89659816455b9f906fc62d19910
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ARPlaneDetection.unity
     guid: 9a6c9ae37cbe8b04f857bd4d28b81c08
   - enabled: 0
     path: Assets/Scenes/AR Hit Test.unity
     guid: f33b516f7660b20469056fe229ea29cd
+  - enabled: 1
+    path: Assets/Scenes/AR Pointing Directed Steering.unity
+    guid: ad7417ead0085fa43b218e0cec9eecc5
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}

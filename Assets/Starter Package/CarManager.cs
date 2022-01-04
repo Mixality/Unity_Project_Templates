@@ -17,6 +17,7 @@
 using System.Collections;
 
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.ARFoundation;
 
 /**
@@ -45,22 +46,18 @@ public class CarManager : MonoBehaviour
 
     private bool WasTapped()
     {
-        if (Input.GetMouseButtonDown(0))
+        Debug.Log("Mouse: " + (Mouse.current != null ? " detected " : " not detected ") + "    Touch " + (Touchscreen.current != null ? " detected " : " not detected"));
+        var mouse = Mouse.current;
+        if (mouse != null && mouse.leftButton.wasReleasedThisFrame)
         {
             return true;
         }
 
-        if (Input.touchCount == 0)
+        var touch = Touchscreen.current;
+        if (touch != null && touch.primaryTouch.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Ended)
         {
-            return false;
+            return true;
         }
-
-        var touch = Input.GetTouch(0);
-        if (touch.phase != TouchPhase.Began)
-        {
-            return false;
-        }
-
-        return true;
+        return false;
     }
 }
